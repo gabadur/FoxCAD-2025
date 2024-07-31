@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage
+	SchemaVersion="1.0"
+	AppVersion="1.0.0"
+	Name="FoxCAD"
+	Description="Test"
+	ProductCode="{3E911425-1506-452F-B1A3-F9C2874F5DDD}"
+	>
+
+	<CompanyDetails Name="Fox News Company"/>
+
+	<Components>
+		<ComponentEntry
+			AppName="FoxCAD"
+			AppDescription="Fox Program Library"
+			ModuleName="./Contents/net8.0-windows/FoxCADCore.dll"
+			LoadOnAutoCADStartup="True"
+			LoadOnCommandInvocation="False">
+			<RuntimeRequirements OS="Win64" SeriesMin="R25.0" SeriesMax="R25.0"/>
+			<Commands GroupName="FoxPlugins">
+				<Command
+					Local="PS_CreateSquare"
+					Global="PS_CreateSquare"/>
+				<Command
+					Local="PS_AlignObjects"
+					Global="PS_AlignObjects"/>
+				<Command
+					Local="PS_FanOutLines"
+					Global="PS_FanOutLines"/>
+			</Commands>
+		</ComponentEntry>
+		<ComponentEntry
+			AppName="Fox Plugin Partial CUIX"
+			ModuleName="./Contents/net8.0-windows/FoxCAD.cuix"
+			LoadOnAutoCADStartup="True"
+			LoadOnCommandInvocation="False">
+		</ComponentEntry>
+
+
+	</Components>
+</ApplicationPackage>
+
